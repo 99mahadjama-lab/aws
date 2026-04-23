@@ -3,6 +3,7 @@
 ## Objective
 Build a custom AWS VPC with public and private subnets, configure correct routing for internet access, and deploy EC2 instances across both subnets. As a bonus, deploy a Bastion Host to securely access the private instance.
 
+<img width="1296" height="1236" alt="image" src="https://github.com/user-attachments/assets/e0c1a4ae-8534-4f3f-81e7-428a4ddca457" />
 ---
 
 ## Knowledge Demonstrated
@@ -35,8 +36,6 @@ Create two route tables:
 - **Private**: local route + `0.0.0.0/0` → NAT Gateway
 
 Explicitly associate each route table with its respective subnet.
-
-<img width="1296" height="1236" alt="image" src="https://github.com/user-attachments/assets/e0c1a4ae-8534-4f3f-81e7-428a4ddca457" />
 
 
 ### 4. Security Groups
