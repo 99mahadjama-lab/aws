@@ -1,1 +1,1 @@
-blank
+Documenting my journey learning AWS from the ground up — covering core services, architecture fundamentals, and hands-on projects.Documenting my journey learning AWS from the ground up — covering core services, architecture fundamentals, and hands-on projects.
