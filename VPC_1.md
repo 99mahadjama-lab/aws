@@ -19,14 +19,15 @@ Build a custom AWS VPC with public and private subnets, configure correct routin
 ### 1. Create the VPC
 Create a custom VPC with CIDR block `10.0.0.0/16`. Then create two subnets — a public subnet (`10.0.16.0/20`) and a private subnet (`10.0.0.0/20`).
 
-📸 *Screenshot: VPC dashboard showing both subnets*
+<img width="2944" height="396" alt="image" src="https://github.com/user-attachments/assets/19ab1ece-b292-4a98-aa48-7bfa02eb6ff0" />
 
 ### 2. Internet Access
 Create and attach an Internet Gateway to the VPC. Then create a NAT Gateway inside the public subnet — this requires an Elastic IP, which must be allocated before creation.
 
 > Note: Elastic IPs must be disassociated before they can be released. Deleting the NAT Gateway handles this.
 
-📸 *Screenshot: NAT Gateway with Elastic IP in available state*
+<img width="3354" height="1140" alt="image" src="https://github.com/user-attachments/assets/56fae12f-3f4f-4575-87f3-5a251b6f84bc" />
+
 
 ### 3. Route Tables
 Create two route tables:
@@ -35,7 +36,8 @@ Create two route tables:
 
 Explicitly associate each route table with its respective subnet.
 
-📸 *Screenshot: VPC resource map/diagram*
+<img width="1296" height="1236" alt="image" src="https://github.com/user-attachments/assets/e0c1a4ae-8534-4f3f-81e7-428a4ddca457" />
+
 
 ### 4. Security Groups
 - **Public EC2 SG**: allow SSH (22) and HTTP (80) inbound from your IP only
@@ -60,7 +62,8 @@ ssh -A ec2-user@<public-ip>
 ssh ec2-user@<private-ip>
 ```
 
-📸 *Screenshot: Successful SSH into private instance via bastion*
+<img width="1244" height="792" alt="image" src="https://github.com/user-attachments/assets/cad8ae5b-8027-4676-a09a-fa264af1b5e1" />
+
 
 ### 7. Verify Connectivity
 Confirm outbound internet access from the private instance via the NAT Gateway.
